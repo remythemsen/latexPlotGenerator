@@ -1,0 +1,12 @@
+\addplot[ mark = x, dashed, red ]
+	coordinates {
+		(4, 7.953022)
+	};
+	\addlegendentry{M = 14, L = 2}
+
+\addplot[ mark = x, dashed, gray ]
+	coordinates {
+		(4, 8.112079)
+	};
+	\addlegendentry{M = 14, L = 3}
+
