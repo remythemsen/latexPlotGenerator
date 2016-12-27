@@ -4,7 +4,7 @@ import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
 
 object Program extends App {
-  val marks = Array('x', '*', '+', 'o')
+  val marks = Array('x', '*', '+', 'o', '^', '-')
   val colors = Array("red", "gray", "purple")
   val lineTypes = Array("dashed")
 
