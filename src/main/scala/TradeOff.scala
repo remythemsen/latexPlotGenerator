@@ -3,21 +3,11 @@ import java.io.{BufferedWriter, File, FileWriter}
 import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
 
-object Program extends App {
-  val marks = Array('x', '*', '+', 'o', '^', '-')
-  val colors = Array("red", "gray", "purple")
-  val lineTypes = Array("dashed")
-
-  // variations:
-  val styles = for {
-    m <- marks
-    c <- colors
-    lt <- lineTypes
-  } yield (m, c, lt)
-
+object TradeOff extends App {
 
   // Read in results
-  val filePath = "data/result"
+  //val filePath = "data/test_results_hyperplane.log"
+  val filePath = "data/test_results_crosspolytope_for_plots.log"
   val outDir = "data"
   val parser = new ResultFileParser(filePath)
 
@@ -43,7 +33,29 @@ object Program extends App {
   // Format and print each bucket
   var i = 0
   for(b <- buckets.keysIterator) {
-    bw.write(formatPlot(buckets(b), b._1, b._2, styles(i)._1, styles(i)._2, styles(i)._3))
+    bw.write(formatPlot(buckets(b), b._1, b._2, {
+      b._1 match {
+          // Xpoly
+        case 1 => "*"
+        case 2 => "10-pointed star"
+        case 3 => "oplus*"
+          // Hyper
+        case 10 => "*"
+        case 11 => "10-pointed star"
+        case 14 => "oplus*"
+        case 15 => "square*"
+        case 16 => "triangle*"
+        case 17 => "diamond*"
+        case 18 => "pentagon*"
+        case 19 => "star"
+      }
+    }, {
+      b._2 match {
+        case 2 => "green"
+        case 3 => "black"
+        case _ => "orange"
+      }
+    }, "dashed"))
     i+=1
   }
 
@@ -51,7 +63,7 @@ object Program extends App {
 
   println("Finished!")
 
-  def formatPlot(points:ArrayBuffer[(Int, Double, Double)], m:Int, L:Int, mark:Char, color:String, linesStyle:String): String = {
+  def formatPlot(points:ArrayBuffer[(Int, Double, Double)], m:Int, L:Int, mark:String, color:String, linesStyle:String): String = {
     /*
 
     \addplot[ mark = x, dashed, red ]
@@ -66,19 +78,7 @@ object Program extends App {
     sb.append("\n\tcoordinates {")
     sb.append("\n\t\t") // indenting cordinates
     for(p <- points) {
-      sb.append("("+{
-        if(p._1 > 0 && p._1 < 40000) {
-          1
-        } else if (p._1 > 40000 && p._1 < 90000) {
-          2
-        } else if (p._1 > 90000 && p._1 < 450000) {
-          3
-        } else if (p._1 > 450000 && p._1 < 800000) {
-          4
-        } else if (p._1 > 800000) {
-          5
-        }
-      } +", "+p._2/10+")")
+      sb.append("("+ p._2/10 +", "+p._3*10+")")
     }
     sb.append("\n\t};")
     sb.append("\n\t\\addlegendentry{M = "+m+", L = "+L+"}\n\n")

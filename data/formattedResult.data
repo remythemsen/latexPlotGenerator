@@ -1,72 +1,48 @@
-\addplot[ mark = x, dashed, red ]
+\addplot[ mark = 10-pointed star, dashed, black ]
 	coordinates {
-		(1, 8.195796)(2, 8.459572)(3, 8.448085)
+		(6.0790880000000005, 0.04187349515151518)(6.5556920000000005, 0.20755190226190492)(7.0347496000000005, 1.1480274596489473)(6.810840000000001, 2.6172913362727397)(6.881773, 9.306243730126226)
 	};
-	\addlegendentry{M = 11, L = 3}
+	\addlegendentry{M = 2, L = 3}
 
-\addplot[ mark = x, dashed, gray ]
+\addplot[ mark = oplus*, dashed, green ]
 	coordinates {
-		(1, 8.450714999999999)(2, 8.538236000000001)(3, 8.5962715)
+		(5.650567199999999, 0.16692581939819456)(5.9413136, 1.7287859102817393)(5.2803112, 0.4366894513083557)(5.662410700000001, 1.9428997156822272)
 	};
-	\addlegendentry{M = 10, L = 3}
+	\addlegendentry{M = 3, L = 2}
 
-\addplot[ mark = x, dashed, purple ]
+\addplot[ mark = 10-pointed star, dashed, orange ]
 	coordinates {
-		(3, 7.959607)(4, 8.0856606)
+		(6.35584, 0.0471040224242424)(6.625635, 0.16558167771825377)(7.108994, 0.9866345790471414)(6.920547000000001, 5.310041013496376)(7.148098, 7.343926930492898)
 	};
-	\addlegendentry{M = 15, L = 4}
+	\addlegendentry{M = 2, L = 4}
 
-\addplot[ mark = *, dashed, red ]
+\addplot[ mark = 10-pointed star, dashed, green ]
 	coordinates {
-		(3, 7.3143294999999995)(4, 7.6544110000000005)
+		(5.5908512, 0.03293305161616162)(6.3845886, 0.20160805718254002)(6.952826, 1.378308997241725)(6.9296715, 4.1753326897065275)(6.7200500000000005, 7.6825840968623424)
 	};
-	\addlegendentry{M = 15, L = 2}
+	\addlegendentry{M = 2, L = 2}
 
-\addplot[ mark = *, dashed, gray ]
+\addplot[ mark = *, dashed, black ]
 	coordinates {
-		(3, 7.6441419999999995)(4, 7.953022)
+		(8.410464000000001, 0.9727271105050503)(8.574683, 5.246597776111108)
 	};
-	\addlegendentry{M = 14, L = 2}
+	\addlegendentry{M = 1, L = 3}
 
-\addplot[ mark = *, dashed, purple ]
+\addplot[ mark = oplus*, dashed, black ]
 	coordinates {
-		(3, 7.726148)(4, 8.015863)
+		(5.9549183, 0.17415123828485476)(5.8826286, 1.001019966302095)(5.5380676, 0.6368451128290921)(5.983994, 1.951359239853734)
 	};
-	\addlegendentry{M = 15, L = 3}
+	\addlegendentry{M = 3, L = 3}
 
-\addplot[ mark = +, dashed, red ]
+\addplot[ mark = *, dashed, orange ]
 	coordinates {
-		(3, 7.901693)(4, 8.112079)
+		(8.485343, 0.9674727921212122)(8.551528999999999, 5.386393538194445)
 	};
-	\addlegendentry{M = 14, L = 3}
+	\addlegendentry{M = 1, L = 4}
 
-\addplot[ mark = +, dashed, gray ]
+\addplot[ mark = oplus*, dashed, orange ]
 	coordinates {
-		(1, 8.464061)(2, 8.5667885)(3, 8.581239)
+		(5.808313, 0.17907825327983948)(6.0263042, 1.2154376011543768)(5.6017506, 0.8079767934041289)(6.0953228, 3.0907937753336068)
 	};
-	\addlegendentry{M = 11, L = 4}
-
-\addplot[ mark = +, dashed, purple ]
-	coordinates {
-		(1, 8.6006836)(2, 8.699301)(3, 8.71332)
-	};
-	\addlegendentry{M = 10, L = 4}
-
-\addplot[ mark = o, dashed, red ]
-	coordinates {
-		(3, 8.180715)(4, 8.364506500000001)
-	};
-	\addlegendentry{M = 14, L = 4}
-
-\addplot[ mark = o, dashed, gray ]
-	coordinates {
-		(1, 8.113863)(2, 8.128167999999999)(3, 8.257797)
-	};
-	\addlegendentry{M = 11, L = 2}
-
-\addplot[ mark = o, dashed, purple ]
-	coordinates {
-		(1, 8.205698)(2, 8.274842)(3, 8.375932)
-	};
-	\addlegendentry{M = 10, L = 2}
+	\addlegendentry{M = 3, L = 4}
 
